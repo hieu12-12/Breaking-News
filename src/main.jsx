@@ -2,6 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import {
+  createBrowserRouter,RouterProvider, Route, Link} from "react-router-dom";
+import Homepage from "./routes/Homepage.jsx";
+import MainLayout from "./layouts/Mainlayout.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -37,6 +42,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <RouterProvider router={router}/>
     <App />
   </StrictMode>,
 )

@@ -8,4 +8,4 @@ const FeaturedPosts = () => {
   )
 }
 
-exportr default FeaturedPosts
+export default FeaturedPosts
