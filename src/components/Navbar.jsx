@@ -1,18 +1,21 @@
 import { useState } from "react"
+import Image from "./Image";
+import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () =>{
     const [open, setOpen] = useState(false);
     return{
 
         <div className="w-full h-16 md:h-20 flex items-center justify-between">
-        // LOGO
-            <Link to='/' className="flex items-center gap-4 text-2xl font-bold">
-                <img src="logo.png" className="w-8 h-8" alt="" />
+        {/*Logo */}  
+            <Link to ='/' className="flex items-center gap-4 text-2xl font-bold">
+                <Image src='logo.png' alt ='Lama Logo' w={32} h={32} />
                 <span>lamalog</span>
             </Link>
         {/*MOBILE MENU */}        
         <div className="md:hidden">
-        // MOBILE BUTTON
+        {/*MOBILE BUTTON */}  
         </div>
 
         <div 
@@ -22,7 +25,9 @@ const Navbar = () =>{
         </div>
         
         </div>
-        // MOBILE LINK LIST
+        
+        {/*MOBILE Link List */}  
+        
         <div  className={`w-full h-screen flex flex-col items-center justify-center gap-8 font-medium text-absolute top-16 
         bg-red-700 transition-all ease-in-out ${open ? "-right-0":"-right-[100%]"}`}>
         menu
